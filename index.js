@@ -12,25 +12,11 @@ const client = new Client({
 
 client.on("ready", async () => {
   console.log(`${client.user.username} Is Online`);
-  client.user.setActivity(`@${client.user.username}`)
+  client.user.setActivity(`Storm Team ✨`)
 })
 
 
 
 // voice
-const { joinVoiceChannel } = require('@discordjs/voice');
-client.on('ready', () => {
-    
-    setInterval( async () => {
-    client.channels.fetch("1025146306353696788") 
-     .then((channel) => { 
-      const VoiceConnection = joinVoiceChannel({
-       channelId: channel.id, 
-       guildId: channel.guild.id, 
-       adapterCreator: channel.guild.voiceAdapterCreator 
-       });
-    }).catch((error) => { return; });
-    }, 1000)
-});
 
 client.login(process.env.token);
