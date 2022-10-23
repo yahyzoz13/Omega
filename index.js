@@ -12,6 +12,7 @@ const client = new Client({
 
 client.on("ready", async () => {
   console.log(`${client.user.username} Is Online`);
+  client.user.setStatus('idle')
   client.user.setActivity(`Storm Team ✨`)
 })
 
